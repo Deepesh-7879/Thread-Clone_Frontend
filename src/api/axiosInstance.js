@@ -11,7 +11,7 @@ axiosInstance.interceptors.request.use(config => {
   return config
 })
 axiosInstance.interceptors.response.use(r => r, err => {
-  if (err.response?.status === 401) { localStorage.removeItem('threadly_token'); window.location.href = '/login' }
+  if (err.response?.status === 401) { localStorage.removeItem('threadly_token'); window.location.href = '/#/login' }
   return Promise.reject(err)
 })
 export default axiosInstance
