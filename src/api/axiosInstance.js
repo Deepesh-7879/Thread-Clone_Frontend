@@ -1,5 +1,5 @@
 import axios from 'axios'
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || (typeof window !== 'undefined' ? `${window.location.origin}/api` : '/api')
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'https://thread-clone-backend-1-zwlq.onrender.com/api'
 const axiosInstance = axios.create({
   baseURL: apiBaseUrl,
   headers: { 'Content-Type': 'application/json' },
